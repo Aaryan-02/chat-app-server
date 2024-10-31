@@ -33,7 +33,7 @@ const server = app.listen(process.env.PORT, () => {
 
 const io = socket(server, {
     cors: {
-        origin: "https://snappy-blue.vercel.app",
+        origin: "https://snappy-chat-application.netlify.app",
         credentials: true,
     },
 });
