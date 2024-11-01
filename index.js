@@ -14,6 +14,10 @@ app.use(express.json());
 app.use("/api/auth", userRoutes)
 app.use("/api/messages", messagesRoute)
 
+app.get('/api/ping', (req, res) => {
+  res.status(200).json({ message: "Backend is awake!" });
+});
+
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
